@@ -1,0 +1,20 @@
+CREATE OR REPLACE FUNCTION estadisticas()
+ RETURNS TABLE (pases int,usuarios int, visitantes int,visitas int) AS
+$$
+DECLARE pases int;
+DECLARE usuarios int;
+DECLARE visitantes int;
+DECLARE visitas int;
+
+BEGIN
+SELECT COUNT(*) INTO pases FROM pase;
+SELECT COUNT(*) INTO usuarios FROM usuario;
+SELECT COUNT(*) INTO visitantes FROM visitante;
+SELECT COUNT(*) INTO visitas FROM pase WHERE estatus='1';
+
+ RETURN Query
+SELECT pases, usuarios, visitantes, visitas;
+ 
+END;
+$$
+LANGUAGE PLPGSQL VOLATILE 

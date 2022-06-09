@@ -1,0 +1,11 @@
+
+
+ALTER SEQUENCE anfitrion_id_anfitrion_seq RESTART WITH 1
+ALTER SEQUENCE departamento_id_departamento_seq RESTART WITH 1
+ALTER SEQUENCE pase_id_pase_seq RESTART WITH 1
+ALTER SEQUENCE persona_id_persona_seq RESTART WITH 1
+ALTER SEQUENCE usuario_id_usuario_seq RESTART WITH 1
+
+ALTER SEQUENCE visitante_id_visitante_seq RESTART WITH 1
+ALTER SEQUENCE visitante_detalle_id_visitante_detalle_seq RESTART WITH 1
+
